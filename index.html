@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="estilo/style.css" />
+    <title>God of War</title>
+  </head>
+  <body>
+    <header>
+      <div class="container">
+        <img src="img/Logo.jpg" alt="Logo" id="imglogo" />
+        <h1>God of War</h1>
+      </div>
+    </header>
+    <nav class="menu">
+      <ul>
+        <li><a href="#">Menu</a></li>
+        <li><a href="#compra">Plataformas</a></li>
+        <li><a href="#jogos">Jogos</a></li>
+      </ul>
+    </nav>
+
+    <video muted autoplay loop width="100%">
+      <source src="img/banner.mp4" type="video/mp4" />
+    </video>
+    <main>
+      <section class="sobre">
+        <div class="visao-geral">
+          <h1>Visão Geral</h1>
+          <h2>Resumo básico do jogo.</h2>
+        </div>
+
+        <article class="visao-geral-info">
+          <p>
+            No coração do jogo está o enredo épico de Kratos. Traído por Ares, o
+            deus da guerra, Kratos busca vingança após um ato terrível que o
+            assombra. Enquanto segue sua jornada em direção ao Olimpo, ele
+            desafia deuses, enfrenta criaturas mitológicas e desvenda segredos
+            obscuros. Além disso, por meio de flashbacks, revelam-se as
+            complexidades do passado tortuoso de Kratos e sua busca incansável
+            por redenção.
+          </p>
+
+          <p>
+            Com a sede de vingança contra os deuses do Olimpo já em seu passado,
+            Kratos e Atreus agora exploram o universo das divindades e criaturas
+            nórdicas. Este reino rigoroso e hostil os força a lutar pela
+            sobrevivência e a aprender a enfrentar os perigos que o cercam, tudo
+            enquanto Kratos orienta seu filho e procura impedi-lo de repetir os
+            erros cruéis de seu próprio passado como o Fantasma de Esparta.
+          </p>
+
+          <p>
+            Esta notável reinvenção de "God of War" preserva elementos icônicos
+            da série, como combates brutais, batalhas épicas contra titãs e a
+            grandiosidade de tirar o fôlego. No entanto, ela os tece habilmente
+            em uma narrativa poderosa e emocionante, redefinindo o mundo de
+            Kratos e Atreus de maneira cativante.
+          </p>
+        </article>
+      </section>
+
+      <section class="sobre-jogos">
+        <h1 id="jogos">JOGOS DA FRANQUIA</h1>
+      </section>
+
+      <section class="jogos">
+        <article class="jogos-painel">
+          
+          <div class="card_container">
+            
+            <img
+              src="img/game1.jpg"
+              alt="foto do primeiro god of war"
+              id="imggame"
+            />
+            <div class="card_inner">
+              <div class="card_header">
+                <p id="lancamento-jogo"><strong>Título</strong><br>God of War</p>
+              <p id="data">
+                <strong>Data de Lançamento</strong> <br />22 de março de 2005
+              </p>
+              <p id="mitologia">
+                <strong>Mitologia</strong><br />
+                Grega
+              </p>
+            </div>
+              <div class="descricao_container">
+                <p id="descricao">
+                  <strong>Descrição</strong><br />
+                  No coração do jogo está o enredo épico de Kratos. Traído por
+                  Ares, o deus da guerra, Kratos busca vingança após um ato
+                  terrível que o assombra. Os jogadores seguem sua jornada em
+                  direção ao Olimpo, desafiando deuses, enfrentando criaturas
+                  mitológicas e desvendando segredos obscuros. A história é
+                  contada de maneira emocionante, com flashbacks revelando o
+                  passado tortuoso de Kratos e sua busca por redenção.
+                </p>
+              </div>
+            </div>
+           
+          </div>
+          <h4>Confira no botão abaixo mais sobre o jogo</h4>
+
+          <button id="btn-saibamais">
+            <a href="godofwar1.html">Saiba mais</a>
+          </button>
+        </article>
+        <button id="btn-volta" onclick="ant()">
+          <img src="img/setaesquerda.png" />
+        </button>
+        <button id="btn-prox" onclick="prox()">
+          <img src="img/setadireita.png" />
+        </button>
+      </section>
+    </main>
+    <footer>
+      <span
+        >Site Desenvolvido por Gabriel. <br />Todos os direitos reservados.<br />&copy;
+        2023
+      </span>
+    </footer>
+  </body>
+</html>
+
+<script>
+  let img_atual = 1;
+
+  function prox() {
+    if (img_atual === 5) {
+      img_atual = 1;
+    } else {
+      img_atual++;
+    }
+    muda_img();
+  }
+
+  function ant() {
+    if (img_atual === 1) {
+      img_atual = 5;
+    } else {
+      img_atual--;
+    }
+    muda_img();
+  }
+
+  function muda_img() {
+    switch (img_atual) {
+      case 1:
+        document.getElementById("imggame").src = "img/game1.jpg";
+        document.getElementById("lancamento-jogo").innerHTML = "God of War";
+        document.getElementById("data").innerHTML =
+          "<strong>Data de Lançamento</strong><br> 22 de março de 2005";
+        document.getElementById("mitologia").innerHTML =
+          "<strong>Mitologia</strong><br> Grega";
+        document.getElementById("descricao").innerHTML =
+          "<strong>Descrição</strong><br> No coração do jogo está o enredo épico de Kratos. Traído por Ares, o deus da guerra, Kratos busca vingança após um ato terrível que o assombra. Enquanto segue sua jornada em direção ao Olimpo, ele desafia deuses, enfrenta criaturas mitológicas e desvenda segredos obscuros. Além disso, por meio de flashbacks, revelam-se as complexidades do passado tortuoso de Kratos e sua busca incansável por redenção.";
+        document.getElementById("btn-game").href = "godofwar1.html";
+        break;
+      case 2:
+        document.getElementById("imggame").src = "img/game2.jpg";
+        document.getElementById("lancamento-jogo").innerHTML = "God of War 2";
+        document.getElementById("data").innerHTML =
+          "<strong>Data de Lançamento</strong><br> 13 de março de 2007";
+        document.getElementById("mitologia").innerHTML =
+          "<strong>Mitologia</strong><br> Grega";
+        document.getElementById("descricao").innerHTML =
+          "<strong>Descrição</strong><br> Em God of War 2, a saga de Kratos continua a se desdobrar de forma grandiosa. Traído novamente pelos deuses do Olimpo, Kratos embarca em uma busca incansável por vingança, confrontando divindades ainda mais poderosas. Os jogadores são levados a desafiar os limites da mitologia grega, enfrentando criaturas ainda mais colossais e desvendando segredos que abalam as próprias fundações do panteão.";
+        document.getElementById("btn-game").href = "godofwar2.html";
+        break;
+      case 3:
+        document.getElementById("imggame").src = "img/game3.jpg";
+        document.getElementById("lancamento-jogo").innerHTML = "God of War 3";
+        document.getElementById("data").innerHTML =
+          "<strong>Data de Lançamento</strong><br>16 de março de 2010";
+        document.getElementById("mitologia").innerHTML =
+          "<strong>Mitologia</strong><br> Grega";
+        document.getElementById("descricao").innerHTML =
+          "<strong>Descrição</strong><br> God of War 3 é um épico jogo eletrônico que culmina na busca de vingança de Kratos contra os deuses do Olimpo. Nesta emocionante aventura, os jogadores testemunham o guerreiro espartano enfrentando os deuses mais poderosos da mitologia grega em sua missão implacável. O jogo se destaca por sua narrativa envolvente, gráficos deslumbrantes e jogabilidade aprimorada, que culminam em um confronto espetacular.";
+        document.getElementById("btn-game").href = "godofwar3.html";
+        break;
+      case 4:
+        document.getElementById("imggame").src = "img/game4.jpg";
+        document.getElementById("imggame").style.textShadow =
+          "2px 2px 2px white";
+        document.getElementById("lancamento-jogo").innerHTML = "God of War 4";
+        document.getElementById("data").innerHTML =
+          "<strong>Data de Lançamento</strong><br> 20 de abril de 2018";
+        document.getElementById("mitologia").innerHTML =
+          "<strong>Mitologia</strong><br> Nórdica";
+        document.getElementById("descricao").innerHTML =
+          "<strong>Descrição</strong><br> Em God of War 4, Kratos enfrenta desafios ainda maiores em sua busca por redenção. Traído novamente pelas divindades, ele embarca em uma jornada implacável, confrontando deuses mais poderosos e desvendando segredos que abalam as próprias fundações do panteão.  Revelando o passado de Kratos e sua busca incansável por redenção, enquanto os jogadores mergulham em um mundo mitológico repleto de perigos e maravilhas.";
+        document.getElementById("btn-game").href = "godofwar4.html";
+        break;
+      case 5:
+        document.getElementById("imggame").src = "img/game5.webp";
+        document.getElementById("lancamento-jogo").innerHTML =
+          "God of War Ragnarok";
+        document.getElementById("data").innerHTML =
+          "<strong>Data de Lançamento</strong><br> 9 de novembro de 2022";
+        document.getElementById("mitologia").innerHTML =
+          "<strong>Mitologia</strong><br> Nórdica";
+        document.getElementById("descricao").innerHTML =
+          "<strong>Descrição</strong><br> God of War: Ragnarok, se passa três anos após o evento do jogo de 2018, com Atreus um pouco mais velho enquanto tenta entender suas origens e a importância de seu nome de batismo — Loki. A busca por respostas vai desencadear no auge do Ragnarok, o fim dos tempos Nórdicos, jogo esperado para aqueles que estavam esperando pela luta de Kratos vs Thor, contendo gráficos de última geração.";
+        document.getElementById("btn-game").href = "godofwar5.html";
+        break;
+    }
+  }
+</script>
