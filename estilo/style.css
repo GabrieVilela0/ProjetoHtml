@@ -51,7 +51,12 @@ nav a {
     font-weight: bold;
     position: relative;
 }
-
+nav ul{
+    display: flex;
+    justify-content: space-around;
+    max-width: 90%;
+    margin: 0 auto;
+}
 nav li a::after {
     content: " ";
     width: 0;
@@ -66,6 +71,10 @@ nav li a::after {
 nav a:hover::after {
     width: 100%;
 }
+nav ul{
+    padding: 1em;
+    display: flex;
+}
 
 #compreaqui{
     text-align: center;
@@ -74,9 +83,12 @@ nav a:hover::after {
     border-radius: 30px;
     padding: 2px 40px;
     margin-bottom: 5px;
+    transition: .5s;
 }
-
-
+#compreaqui:hover{
+    background-color: black;
+    color: red;
+}
 footer{ 
     text-align: center;
     color: black;
@@ -106,21 +118,8 @@ a{text-decoration: none;color: white;}
     margin:0 auto;
     overflow: hidden;
 }
-nav ul{
-    padding: 1em;
-    max-width: 1024px;
-    margin: 0 auto;
-    display: flex;
-    justify-content: space-evenly;
-}
-#compreaqui{
-    text-align: center;
-    background-color: red;
-    border: 2px solid rgba(0,0,0,0);
-    border-radius: 30px;
-    padding: 2px 40px;
-    margin-bottom: 5px;
-}
+
+
 .sobre {
   background-image: linear-gradient(rgba(0, 0, 0, 0.58) 100%, rgba(255, 255, 255, 0.249) 0%), url(../img/sobre.webp);
   background-size: cover; 
@@ -235,15 +234,13 @@ nav ul{
         align-items: center;
         display: flex;   
         justify-content: space-around;
-    }
-    #imggame{
-        
-    }
-    
+    }  
     header h1{
         flex: 1;
         padding-right: 100px;
     }
+
+
 }
 
 @media (min-width: 1024px){

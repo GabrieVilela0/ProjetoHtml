@@ -35,6 +35,23 @@ ul, li{
 img{
     width: 100px;
 }
+section{
+    padding: 0.7em;
+}
+
+
+p{
+    text-align: left;
+    margin-bottom: 0.9em;
+    word-wrap: break-word;
+    overflow-wrap: break-word;
+    word-break: keep-all;
+}
+
+img{display: block;margin: auto;border-radius:5px;box-shadow: 2px 2px 5px #ff0000;}
+
+a{text-decoration: none;color: white;}
+/* PARTE DO HEADER */
 nav{
     background: linear-gradient(black 0%, white 20%) ;
     text-align: center;
@@ -60,28 +77,13 @@ nav a::after {
 nav a:hover::after {
     width: 100%;
 }
+/* PARTE DO FOOTER */
 footer{ 
     text-align: center;
     color: black;
     background-color: #cbbfb8;
     padding-top: 7px;
 }
-section{
-    padding: 0.7em;
-}
-
-
-p{
-    text-align: left;
-    margin-bottom: 0.9em;
-    word-wrap: break-word;
-    overflow-wrap: break-word;
-    word-break: keep-all;
-}
-
-img{display: block;margin: auto;border-radius:5px;box-shadow: 2px 2px 5px #ff0000;}
-
-a{text-decoration: none;color: white;}
 
 nav ul{
     padding: 1em;
@@ -125,7 +127,7 @@ button:hover{
     border: 1px solid red;
 }
 .nome, .email{
-    max-height: 65px;
+    max-height: 75px;
 }
 /*** Classes Personalizadas ***/
 .container {
@@ -136,26 +138,90 @@ button:hover{
 .contato{
     width: 90%;
     margin: 0 auto;
+    background: linear-gradient(black 0%, rgb(40, 40, 40)100%) ;
+}
+.jogos{
+    margin: 0 auto;
+    text-align: start;
+    padding: 5px;
 }
 .jogos label{
     font-size: 1em;
     padding: 5px 0 30px 0;
 }
-.jogos{
-    text-align: start;
+.jogos input{
+    cursor: pointer;
 }
+
 .mensagem{
     padding-top: 30px;
 }
 @media (min-width: 760px){
     fieldset{
         display: flex;
-        width: 65%;
+        justify-content: space-around;
+        width: 500px;
         margin: 0 auto;
     }
-    div{
+    .email{
+        padding-top: 8px;
+    }
+    .jogos{
         text-align: start;
         max-width: 58%;
         margin: 0 auto;
+        padding-top: 10px;
+    
+}
+header .container{
+    align-items: center;
+    display: flex;   
+    justify-content: space-around;
+}  
+header h1{
+    flex: 1;
+    padding-right: 100px;
+}
+}
+@media (min-width: 1024px){
+    nav{
+        font-size: 1.3em;
+    }
+    .contato{
+        font-size: 1.1em;
+    }
+    .contato h1{
+        font-size: 2em;
+    }
+    .contato p{
+        font-size: 1em;
+    }
+    form{
+        font-size: 1.15em;
+    }
+}
+@media (min-width: 1024px){
+    fieldset{
+        max-width: 535px;
+        width: 500px;
+        margin: 0 auto;   
+    }
+    .jogos{
+        text-align: start;
+        width: 48%;
+        margin: 0 auto;
+    }
+}
+@media (min-width: 1879px){
+    .nome{
+        max-width: 169px;
+        max-height: 67px;
+    }
+    .jogos{
+        width: 22em;
+    }
+    textarea{
+        width: 300px;
+        height: 100px;
     }
 }
