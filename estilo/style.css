@@ -44,9 +44,9 @@ img{
 nav{
     background: linear-gradient(black 0%, white 20%) ;
     text-align: center;
+    padding-bottom: 5px;
 }
 nav a {
-
     color: black;
     font-weight: bold;
     position: relative;
@@ -67,7 +67,14 @@ nav a:hover::after {
     width: 100%;
 }
 
-
+#compreaqui{
+    text-align: center;
+    background-color: red;
+    border: 2px solid rgba(0,0,0,0);
+    border-radius: 30px;
+    padding: 2px 40px;
+    margin-bottom: 5px;
+}
 
 
 footer{ 
@@ -122,7 +129,6 @@ nav ul{
 }
 .visao-geral h2{
     text-align: start;
-    margin-left: 0.8em;
     padding-top: 15px;
     font-size: 1.1em;
 }
@@ -134,8 +140,9 @@ nav ul{
 .jogos img{
     width: 50px;
 }
-.lancamento-jogo{
+#lancamento-jogo{
     text-align: center;
+    padding-top: 5px;
 }
 .jogos-painel h4{
     text-align: center;
@@ -166,7 +173,7 @@ nav ul{
 }
 #imggame{
     width: 100%;
-    height: 235px;
+    height: 100%;
 }
 #data{
     padding-top: 7px;
@@ -185,7 +192,7 @@ nav ul{
 #btn-saibamais{
     background-color: black;
     border: 1px solid white;
-    padding: 0.5em;
+    padding: 0.8em;
     margin-bottom: 15px;
 }
 #btn-saibamais a{
@@ -197,24 +204,32 @@ nav ul{
 #btn-saibamais a:hover{
     color: red;
 }
+
 /* RESPONSIVIDADE */
-@media (min-width: 425px){
+
+@media (min-width: 414px){
     .descricao_container{
-        min-height: 326px;
+        min-height: 315px;
     }
 }
+
+@media (min-width: 580px){
+    .descricao_container{
+        min-height: 230px;
+    }
+}
+
 @media (min-width: 749px){
     body{
         font-size: 1.1em;
     }
     header .container{
-        display: flex;   
-        
-        justify-content: space-around;
         align-items: center;
+        display: flex;   
+        justify-content: space-around;
     }
-    #imglogo{
-        width: 100px;
+    #imggame{
+        
     }
     
     header h1{
@@ -222,6 +237,7 @@ nav ul{
         padding-right: 100px;
     }
 }
+
 @media (min-width: 1024px){
     #lancamento-jogo{
         text-align: center;
@@ -241,6 +257,5 @@ nav ul{
     #data, #mitologia, #lancamento-jogo, .card_container img, .card_header{
         flex: 1;
     }
-    
 }
 

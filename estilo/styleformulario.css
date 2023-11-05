@@ -1,0 +1,170 @@
+/**********************************************************
+ * Projeto desenvolvido usando o conceito do Mobile First *
+ * Nome: Gabriel Vilela Peixoto                           *
+ * Curso Técnico                                          *
+ *********************************************************/
+ :root {
+    --main-bg-color: #000000;
+    --fonte-titulo: Georgia,'Times New Roman', Times, serif;
+    --fonte-texto: Verdana, Arial, sans-serif;
+  }
+
+/*RESET GERAL*/
+*, *::after, *::before {margin: 0;padding: 0;box-sizing: border-box;border: none;outline: none;text-decoration: none;}
+
+html, body{height: 100vh;font-size: 100%;}
+
+body {
+    background-color: var(--main-bg-color);
+    color: rgb(255, 255, 255); 
+    font-size: 16px;
+    font-family: var(--fonte-texto);
+    line-height: 1.625em;
+    scroll-behavior: smooth;
+}
+
+h1,h2,h3,h4,h5,h6{
+    text-align: center;
+    font-family: var(--fonte-titulo);
+    text-shadow: 2px 2px 2px red;
+    margin: 0.5em 0;
+}
+ul, li{
+    list-style: none;
+}
+img{
+    width: 100px;
+}
+nav{
+    background: linear-gradient(black 0%, white 20%) ;
+    text-align: center;
+    padding-bottom: 5px;
+}
+nav a {
+    color: black;
+    font-weight: bold;
+    position: relative;
+}
+
+nav a::after {
+    content: " ";
+    width: 0;
+    height: 3px;
+    border-bottom: solid 3px red;
+    position: absolute;
+    left: 0;
+    transform: translateY(25px); /* Mova a linha para baixo ajustando o valor aqui */
+    transition: all 0.7s;
+}
+
+nav a:hover::after {
+    width: 100%;
+}
+
+#compreaqui{
+    text-align: center;
+    background-color: red;
+    border: 2px solid rgba(0,0,0,0);
+    border-radius: 30px;
+    padding: 2px 40px;
+    margin-bottom: 5px;
+}
+footer{ 
+    text-align: center;
+    color: black;
+    background-color: #cbbfb8;
+    padding-top: 7px;
+}
+section{
+    padding: 0.7em;
+}
+
+
+p{
+    text-align: left;
+    margin-bottom: 0.9em;
+    word-wrap: break-word;
+    overflow-wrap: break-word;
+    word-break: keep-all;
+}
+
+img{display: block;margin: auto;border-radius:5px;box-shadow: 2px 2px 5px #ff0000;}
+
+a{text-decoration: none;color: white;}
+
+nav ul{
+    padding: 1em;
+    max-width: 1024px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-evenly;
+}
+
+header{
+    background-color: black;
+}
+form, p{
+    text-align: center;
+    font-size: 0.85em;
+}
+label{
+    display: block;
+}
+input{
+    margin-bottom: 17px;
+}
+input:focus {
+    border: 2px solid red;
+    padding: 4px;
+}
+textarea{
+    margin-top: 5px;
+    width: 230px;
+    height: 150px;
+}
+button{
+    color: black;
+    background-color: white;
+    border: 1px solid white;
+    padding: 0.3em;
+    margin: 15px 0 10px 0;
+}
+button:hover{
+    color: red;
+    border: 1px solid red;
+}
+.nome, .email{
+    max-height: 65px;
+}
+/*** Classes Personalizadas ***/
+.container {
+    width: 95%;
+    margin:0 auto;
+    overflow: hidden;
+}
+.contato{
+    width: 90%;
+    margin: 0 auto;
+}
+.jogos label{
+    font-size: 1em;
+    padding: 5px 0 30px 0;
+}
+.jogos{
+    text-align: start;
+}
+.mensagem{
+    padding-top: 30px;
+}
+@media (min-width: 760px){
+    fieldset{
+        display: flex;
+        width: 65%;
+        margin: 0 auto;
+    }
+    div{
+        text-align: start;
+        max-width: 58%;
+        margin: 0 auto;
+    }
+}
