@@ -156,6 +156,11 @@ button:hover{
 .mensagem{
     padding-top: 30px;
 }
+
+
+/**************************************** RESPONSIVO ****************************************/
+
+
 @media (min-width: 760px){
     fieldset{
         display: flex;
@@ -173,8 +178,7 @@ button:hover{
         padding-top: 10px;
 }
 img{
-    width: 100%;
-    height: 100%;
+    width: 100px;
 }
 header .container{
     align-items: center;

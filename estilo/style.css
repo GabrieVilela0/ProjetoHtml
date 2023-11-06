@@ -118,8 +118,6 @@ a{text-decoration: none;color: white;}
     margin:0 auto;
     overflow: hidden;
 }
-
-
 .sobre {
   background-image: linear-gradient(rgba(0, 0, 0, 0.58) 100%, rgba(255, 255, 255, 0.249) 0%), url(../img/sobre.webp);
   background-size: cover; 
@@ -145,7 +143,8 @@ a{text-decoration: none;color: white;}
     background: linear-gradient(black 83%, white 140%);
 }
 .jogos img{
-    width: 50px;
+    width: 100%;
+    height: 100%;
 }
 #lancamento-jogo{
     text-align: center;
@@ -157,7 +156,8 @@ a{text-decoration: none;color: white;}
     padding-top: 10px;
 }
 
-/* ID */
+/********* ID *********/
+
 #btn-prox, #btn-volta{
    margin: 0 8px;
 }
@@ -172,15 +172,11 @@ a{text-decoration: none;color: white;}
     box-shadow: none;
     border: 2px solid white;
 }
-#data strong, #mitologia strong, #descricao strong{
+#lancamento-jogo strong, #data strong, #mitologia strong, #descricao strong{
     text-shadow: 2px 2px 2px red;
 }
 #mitologia,#data, #descricao{
     text-align: center;
-}
-#imggame{
-    width: 100%;
-    height: 100%;
 }
 #data{
     padding-top: 7px;
@@ -199,20 +195,22 @@ a{text-decoration: none;color: white;}
 #btn-saibamais{
     background-color: black;
     border: 1px solid white;
-    padding: 0.8em;
-    margin-bottom: 15px;
+    padding: 1.3em;
+    margin: 25px 0;
 }
-#btn-saibamais a{
+#btn-saibamais{
     color: white;
+    cursor: pointer;
 }
 #btn-saibamais:hover{   
     border: 1px solid red;
+    color: red;
 }
 #btn-saibamais a:hover{
     color: red;
 }
 
-/* RESPONSIVIDADE */
+/************************************* RESPONSIVIDADE *******************************/
 
 @media (min-width: 414px){
     .descricao_container{
@@ -239,20 +237,17 @@ a{text-decoration: none;color: white;}
         flex: 1;
         padding-right: 100px;
     }
-
-
 }
-
 @media (min-width: 1024px){
     #lancamento-jogo{
         text-align: center;
     }
     .card_container{
-        background-color: red;
+        background-color: rgb(63, 63, 63);
         display: flex;
-        max-width: 960px;
-        align-items: center;
+        max-width: 90%;
         margin: 0 auto;
+        align-items: center;
         padding: 1em;
     }
     .card_header{
@@ -262,5 +257,27 @@ a{text-decoration: none;color: white;}
     #data, #mitologia, #lancamento-jogo, .card_container img, .card_header{
         flex: 1;
     }
+    .card_inner{
+        padding: 3em;
+    }
+    .card_inner p{
+        font-size: 1em;
+    }
+    #imggame{
+        box-shadow: 7px 7px 3px black;
+        width: 400px;
+    }
+    
+    #lancamento-jogo strong, #data strong, #mitologia strong, #descricao strong{
+        font-size: 1em;
+        text-shadow: 2px 2px 2px black;
+    }
 }
-
+@media (min-width: 1440px){
+    .card_inner p{
+        font-size: 1.1em;
+    }
+    #lancamento-jogo strong, #data strong, #mitologia strong, #descricao strong{
+        font-size: 1.2em;
+      
+}
