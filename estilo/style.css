@@ -54,7 +54,7 @@ nav a {
 nav ul{
     display: flex;
     justify-content: space-around;
-    max-width: 90%;
+    max-width: 40%;
     margin: 0 auto;
 }
 nav li a::after {
@@ -192,21 +192,21 @@ a{text-decoration: none;color: white;}
     word-break: keep-all;
     letter-spacing: 1px;
 }
-#btn-saibamais{
+#btn-game1{
     background-color: black;
     border: 1px solid white;
     padding: 1.3em;
     margin: 25px 0;
 }
-#btn-saibamais{
+#btn-game1{
     color: white;
     cursor: pointer;
 }
-#btn-saibamais:hover{   
+#btn-game1:hover{   
     border: 1px solid red;
     color: red;
 }
-#btn-saibamais a:hover{
+#btn-game1 a:hover{
     color: red;
 }
 
@@ -274,10 +274,43 @@ a{text-decoration: none;color: white;}
     }
 }
 @media (min-width: 1440px){
+    .sobre{
+        display: flex;
+    }
+    .visao-geral{
+        width: 150em;
+        height: 10px;
+        padding-left: 70px;
+    }
+    .visao-geral h1{
+        text-align: start;
+        margin-top: 90px;
+    }
+    .visao-geral h2{
+        padding-top: 0;
+    }
+    .sobre p:first-of-type{
+        margin-top: 70px;
+    }
+
     .card_inner p{
         font-size: 1.1em;
     }
     #lancamento-jogo strong, #data strong, #mitologia strong, #descricao strong{
-        font-size: 1.2em;
-      
+        font-size: 1.2em;     
+}
+}
+@media (min-width: 1920px){
+    .visao-geral{
+        width: 150em;
+        height: 10px;
+        padding-left: 200px;
+    }
+    .visao-geral-info{
+        width: 90em;
+        margin-right: 400px;
+    }
+    .visao-geral h1{
+        margin-top: 10em;
+    }
 }
